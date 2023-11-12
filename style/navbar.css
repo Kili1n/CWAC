@@ -49,6 +49,8 @@ body {
 .navbar a{
     font-size: 18px;
     color: black;
+    transform: scale(1);
+    transition: .500s ease-in-out;
 }
 
 header a:not(nav a){
@@ -74,8 +76,24 @@ header a:not(nav a){
     width: 100%;
 } 
 
+.navbar a:hover{
+    transform: scale(1.1);
+}
+
 .navbar .ici{
     color: rgba(153, 109, 109);
     font-weight: bold;
 }
 
+
+/* STICKY NAVBAR */
+
+#stickyNavbar{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    background-color: #fdf9dc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

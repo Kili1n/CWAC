@@ -8,7 +8,7 @@
     <title>AMON SCHOOL</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="">
         <div class="logo">
             <a href="index.html"><img src="image/amon_logo.png" alt="amon logo"> </a>
             <a href="./index.html">AMON SCHOOL</a>
@@ -25,7 +25,8 @@
             <div>
             <h1>WELCOME TO AMON SCHOOL</h1>
             <p class="top-line"></p>
-            <p class="bottom"> "Le charisme n'est pas le pouvoir de séduire, mais le don de connecter. En cultivant notre charisme, nous tissons des liens qui illuminent nos vies et celles des autres" <br><br>Bartolomeo Panciantichi </p>
+            <p class="bottom"> "Le charisme n'est pas le pouvoir de séduire, mais le don de connecter. En cultivant notre charisme, 
+                                nous tissons des liens qui illuminent nos vies et celles des autres" <br><br>Bartolomeo Panciantichi </p>
             <p class="bottom-line"></p>
             </div>
           </div>
@@ -33,8 +34,13 @@
               <iframe class="video-student" src="https://www.youtube.com/embed/e3r8vYfgTJ4?si=n4Ahye43RA2TgAJ2&amp;start=6" title="YouTube video player" allowfullscreen></iframe>
               <div class="text">
                 <h1>NOS ETUDIANTS EN PARLENT</h1>
-                <p>Depuis plus de 20 ans, la cloche sonne tout les matins, permettant à des milliers d'élèves de partager leurs pensées, leur motivation et leur enthousiame à l'idée de prendre un nouveau départ dans la vie. <br><br>
-                   Peu importe d'où vous venez, nous partageons un sentiment commun : notre école est un endroit où le charisme, la confiance et le développement des compétences personnelles se cultivent. Ecoutons ces voix, chacune raconte une histoire unique, chaque histoire contribuant à la richesse de l'expérience charismatique que nous offrons ici.</p>
+                <p>Depuis plus de 20 ans, la cloche sonne tout les matins, permettant à des milliers d'élèves de partager leurs pensées, 
+                    leur motivation et leur enthousiame à l'idée de prendre un nouveau départ dans la vie. 
+                    <br><br>
+                    Peu importe d'où vous venez, nous partageons un sentiment commun : notre école est un endroit où le charisme, 
+                    la confiance et le développement des compétences personnelles se cultivent. Ecoutons ces voix, chacune raconte une histoire unique, 
+                    chaque histoire contribuant à la richesse de l'expérience charismatique que nous offrons ici.
+                </p>
               </div>
           </div>
           <hr>
@@ -54,7 +60,7 @@
             <div class="article1">
                 <img src="image/article2.jpg" alt="étudiant devant une grande vile">
                 <div>
-                    <h1>MAXWELL EVERGREEN</h1>
+                    <h1>MAXWELL EVGREEN</h1>
                     <p>Boostez votre charisme dès aujourd'hui ! Découvrez des astuces inédites pour gagner en influence et confiance.</p> <p class="cliquer">voir plus...</p>
                 </div>
             </div>
@@ -72,13 +78,37 @@
             <div class="concept-img">
                 <div class="overlay">
                     <h1>CONCEPT</h1>
-                    <p>En l'aube glorieuse des année 1980, notre vision audacieuse a donné naissance à un projet novateur, une initiative destinée à sauvegarder la quintessence même de la vie. Nôtre projet visionnaire a évolué au fil des années pour se transformer en une école emblématique, où les cours inaugurés en l'an 2000 ont constitué une véritable porte ouverte vers une renaissance, une opportunité unique de revenir à l'âge d'or de la jeunesse et d'embrasser un nouveau chapitre imprégné de charisme.
-                        Les promesses faites lors de nos débuts n'étaient rien de moins que la garantie de vous propulser vers un retour en arrière temporel, jusqu'à l'époque vibrante de vos vingt ans. Un voyage transcendant le temps pour vous offrir la chance inouïe de redémarrer, de réinventer votre existence avec une dose renouvelée de charisme, un attribut qui transcende l'ordinaire pour marquer votre trajectoire de succès.
-                        De nos jours, notre engagement indéfectible envers ces sauvegardes temporelles persiste, tissant un héritage qui s'étend au-delà de notre époque et se projette vers l'avenir. Chaque génération future est ainsi investie de la possibilité de bénéficier de cette école exceptionnelle, où le passé et le présent s'entrelacent pour sculpter un futur empreint de sagesse et de magnétisme. Nos sauvegardes, telles des pierres angulaires du savoir intemporel, continuent d'ériger un pont entre les époques, offrant un legs précieux aux générations à venir.</p>
+                    <div class="overlay1">
+                        <p id="p1"></p>
+                        <p>En 1980, une vision novatrice a donné naissance à un projet ambitieux : la préservation de l'essence même de la vie. 
+                            Ce concept visionnaire a évolué au fil des décennies pour devenir une institution éducative emblématique. 
+                            Les cours inaugurés en l'an 2000 ont ouvert une porte vers une expérience exceptionnelle, offrant à chacun la possibilité de revenir à l'âge d'or de la jeunesse 
+                            et de redémarrer sa vie avec une nouvelle dose de charisme, un élément essentiel qui transcende les frontières du quotidien.
+                            <br>Aujourd'hui, notre engagement envers ces voyages temporels persiste, créant un héritage qui dépasse les limites du temps et s'étend vers l'avenir.
+                             Chaque génération future a désormais l'opportunité de tirer profit de cette institution exceptionnelle, 
+                             où le passé et le présent se conjuguent pour façonner un futur imprégné de sagesse et de magnétisme. 
+                             Les sauvegardes temporelles, telles des sentinelles du savoir intemporel, continuent de construire un pont entre les époques, 
+                             représentant non seulement un legs précieux pour les générations à venir, mais aussi une source inépuisable de connaissances et de valeurs. 
+                             Ces sauvegardes sont les archives vivantes d'une époque révolue, mais dont l'influence perdure, façonnant ainsi les destinées futures de manière unique.
+                        </p>
+                    </div>  
                 </div>
             </div>
           </div>
         <a href="https://kinsta.com/fr/blog/stylisation-image-css/">Image hover </a>
     </main>
+    <script>
+        var navbar = document.querySelector('.header');
+        var sticky = navbar.offsetTop;
+
+        window.addEventListener('scroll', function() {
+            var scrollPosition = window.scrollY;
+            if (scrollPosition >= sticky) {
+                navbar.id = 'stickyNavbar';
+             } else {
+                navbar.id = '';
+             }
+            });
+        </script>   
 </body>
 </html>
