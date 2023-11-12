@@ -90,10 +90,26 @@ header a:not(nav a){
 
 #stickyNavbar{
     position: fixed;
+    height: 3rem;
     z-index: 1;
     width: 100%;
     top: 0;
     margin: 0;
-    background-color: #fdf9dc;
+    background: rgba(153, 109, 109);
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#stickyNavbar a {
+    color: #fdf9dc;
+}
+
+#stickyNavbar img{
+    display: none;
+}
+
+#stickyNavbar .logo{
+    margin-left: 20px;
 }
