@@ -1,93 +1,3 @@
-@font-face {
-    font-family: 'school';
-    src: url('/font/school-font.ttf');
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
-@media screen and (max-width: 880px){
-    body{
-        background-color: #848; /*Violet*/
-  }
-
-}
-
-body {
-    background-color: #fdf9dc;
-}
-/* NAVBAR */
-
-.header{
-    display: flex;
-    position: relative;
-    width: calc(100% - 20px);
-    height: 120px ;
-    background: rgba(255, 255, 255, 0.23);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 50px;
-    backdrop-filter: blur(7.7px);
-    margin: 10px;
-}
-
-.logo img {
-    height:100px;
-    vertical-align: middle ;
-}
-
-.header a{
-    position: relative;
-    vertical-align: middle;
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-    margin-right: 5%;
-}
-
-.navbar a{
-    font-size: 18px;
-    color: black;
-}
-
-header a:not(nav a){
-    color: black;
-    font-weight: bold;
-    font-size: 40px;
-    font-style: italic;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-.navbar a::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: black;
-    transition: .3s;
-}
-
-.navbar a:hover::before{
-    width: 100%;
-}
-
-main img {
-    width: 100%;
-    margin: 20px;
-}
-
-
 /* WELCOME TO AMON SCHOOL */
 .welcome{
     margin-top: 120px;
@@ -142,7 +52,6 @@ main img {
     width: 10px;
     height:15%;
     bottom: 0;
-    color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
@@ -160,6 +69,7 @@ main img {
     width: 50vh;
     height: 30vh;
     padding: 20px;
+    border: 0 ;
 }
 
 .text{
@@ -214,7 +124,7 @@ hr{
     margin: 30px ;
 }
 
-#cliquer {
+.cliquer {  
     background-color: rgba(71, 71, 71, .7);
     border-radius: 10px;
     margin-top: 10px;
@@ -238,3 +148,62 @@ hr{
     font-family: system-ui;
 }
 
+.article1{
+    transform: scale(1);
+    transition: .500s ease-in-out;
+}
+
+.article1:hover{
+    transform: scale(1.1);
+}
+
+/* PRINCIPE DE L'ECOLE*/
+
+.concept{
+    display: flex;
+    margin-top: 120px;
+    height: 30rem;
+    background: url(image/salle-classe.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.concept:hover .overlay{
+    opacity: 1;
+}
+.overlay h1{
+    padding: 8px;
+    font-size: 50px;
+    color: #FFFFFF;
+    background: rgba(153, 109, 109, .7);
+    border-radius: 5px;
+    text-shadow: #474747 3px 5px 2px;
+}
+
+.overlay p{
+    margin: 40px;
+    position: absolute;
+    font-weight: bold;
+    padding: 10px;
+    bottom: 23%;
+    color: #FFFFFF;
+    background: rgba(153, 109, 109, .5);
+    border-radius: 5px;
+    text-shadow: #474747 3px 5px 2px;
+}
