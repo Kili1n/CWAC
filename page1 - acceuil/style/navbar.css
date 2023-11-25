@@ -1,0 +1,123 @@
+/* COMMUN */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    background-color: #fdf9dc;
+}
+
+/* NAVBAR */
+
+.header{
+    display: flex;
+    position: relative;
+    width: calc(100% - 20px);
+    height: 120px ;
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    backdrop-filter: blur(7.7px);
+    margin: 10px;
+    transition: background-color .3s ease-in-out;
+}
+
+.logo img {
+    height:100px;
+    vertical-align: middle ;
+}
+
+.header a{
+    position: relative;
+    vertical-align: middle;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 5%;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: black;
+    transform: scale(1);
+    transition: .500s ease-in-out;
+}
+
+header a:not(nav a){
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    font-style: italic;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: transform .3s ease-in-out;
+}
+
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+} 
+
+.navbar a:hover{
+    transform: scale(1.1);
+}
+
+.navbar .ici{
+    color: rgba(153, 109, 109);
+    font-weight: bold;
+}
+
+
+/* STICKY NAVBAR */
+
+#stickyNavbar{
+    position: fixed;
+    height: 3rem;
+    z-index: 15;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    background: rgba(153, 109, 109);
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+#stickyNavbar a {
+    color: #fdf9dc;
+}
+
+#stickyNavbar img{
+    display: none;
+}
+
+#stickyNavbar .logo a{
+    margin-left: 20px;
+    transform: translateX(-20px);
+}
+
+#stickyNavbar .ici{
+    color: black;
+}
